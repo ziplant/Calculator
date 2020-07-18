@@ -1,6 +1,6 @@
 {
   "name": "strcalc",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Smart string calculator with variables",
   "main": "gulpfile.js",
   "keywords": [
