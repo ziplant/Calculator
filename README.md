@@ -1,12 +1,12 @@
 # Calculator
 
-Smart string calculator with variables.  
+**Smart string calculator with variables.**  
 Enter an expression of any complexity into field and get result instantly.  
 Use own variables. In addition, may contain expression too.  
 
-## Usage
-Include calc.css and calc.js files from dist directory into you page.  
-Call the node element calc() method to render calculator inside  
+### Usage
+- Include calc.css and calc.js files from dist directory into you page.  
+- Call the node element calc() method to render calculator inside  
 Example:  
 ```js
 document.querySelector('#calc').calc() 
