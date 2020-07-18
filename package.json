@@ -1,14 +1,19 @@
 {
-  "name": "calculator",
+  "name": "strcalc",
   "version": "1.0.0",
-  "description": "Smart string calculator",
+  "description": "Smart string calculator with variables",
   "main": "gulpfile.js",
+  "keywords": [
+    "calc",
+    "calculator",
+    "string"
+  ],
   "scripts": {
     "start": "gulp start",
     "build": "gulp build"
   },
   "author": "ZipLant",
-  "repository": "https://github.com/ziplant/calculator.git",
+  "repository": "https://github.com/ziplant/strcalc.git",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.10.4",
