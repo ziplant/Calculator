@@ -7,7 +7,12 @@ export class Calc {
     this.root = root
     this.root.innerHTML = ''
     this.root.appendChild(this.create(this.template))
-    this.data = JSON.parse(localStorage.getItem(this.root.id)) || {}
+    try {
+      this.data = JSON.parse(localStorage.getItem(this.root.id)) || {}
+    }
+    catch {
+      this.data = {}
+    }
     this.input = this.root.querySelector('.calc_input')
     this.output = this.root.querySelector('.calc_result')
     this.input.value = this.data.exp || ''
