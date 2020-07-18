@@ -1,0 +1,24 @@
+%element
+	width: 100%
+	height: $size + $indent*2
+	box-shadow:	$insetShadow
+	border:	none
+	outline-color: $selectColor
+	box-sizing:	border-box
+	padding: 10px
+	transition-duration:	0.25s
+	margin: 0px
+	border-radius: 5px
+%input
+	@extend %element
+	font-size: 1em
+	line-height: 1em
+
+%btn
+	@extend %element
+	font-size: 0.75em
+	background-color:	$btnBG
+	user-select: none
+	cursor: pointer
+	&:hover	
+		background-color:	$btnBGHover

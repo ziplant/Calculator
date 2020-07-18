@@ -1,0 +1,65 @@
+@import modules/_vars
+@import modules/_placeholders
+
+.calc
+	font-family: $font
+	font-size: $size
+	box-sizing:	border-box
+	border-radius: 5px
+	max-width: $width
+	min-width: 280px
+	padding: $indent*1.5
+	color: $textColor
+	background-color:	$bgColor
+	box-shadow:	$shadow
+	& *::selection
+		background-color: $selectBGColor
+		color: $selectColor
+	&_head
+		margin-bottom: $indent
+		display: flex
+		align-items: center
+		user-select: none
+		position:	relative
+	&_title
+		margin: 0
+		font-size: 0.7em
+	&_input
+		@extend %input
+	&_controls
+		display: flex
+		padding: $indent 0
+	&_btn
+		@extend %btn
+		margin-right: $indent
+		&:last-child
+			margin-right: 0px
+		&--disabled,
+		&--disabled:hover
+			cursor:	default
+			background-color:	$btnDisabled
+		&--clear
+		&--add
+	&_result
+		@extend %input
+		background-color:	$selectBGColor
+	&_vars
+	.vars
+		&_item
+			display: flex
+			align-items: center
+			padding-top: $indent
+		&_key
+			@extend %input
+			flex: 1
+		&_eq
+			font-size: 1em
+			padding: 0 $indent*0.5
+			user-select: none
+		&_value
+			@extend %input
+			flex: 3
+		&_remove
+			@extend %btn
+			flex: 2
+			margin-left: $indent

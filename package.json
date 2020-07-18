@@ -1,0 +1,30 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "Smart string calculator",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp start",
+    "build": "gulp build"
+  },
+  "author": "ZipLant",
+  "repository": "https://github.com/ziplant/calculator.git",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "autoprefixer": "^9.8.5",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-debug": "^4.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-watch": "^5.0.1",
+    "webpack-stream": "^5.2.1"
+  }
+}
