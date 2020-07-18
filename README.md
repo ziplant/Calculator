@@ -1,4 +1,4 @@
-# Calculator
+# strcalc
 
 **Smart string calculator with variables.**  
 Enter an expression of any complexity into field and get result instantly.  
