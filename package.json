@@ -2,7 +2,7 @@
   "name": "strcalc",
   "version": "1.0.4",
   "description": "Smart string calculator with variables",
-  "main": "gulpfile.js",
+  "main": "dev/js/index.js",
   "keywords": [
     "calc",
     "calculator",
