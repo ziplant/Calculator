@@ -1,6 +1,6 @@
 {
   "name": "strcalc",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Smart string calculator with variables",
   "main": "dev/js/index.js",
   "keywords": [
