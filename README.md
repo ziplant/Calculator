@@ -17,7 +17,7 @@ Example:
 import { Calc } from 'strcalc'
 new Calc(document.querySelector('#calc'), true)
 ```
-If flag true, styles will add as text inside <style> element  
+If flag true, styles will add as text inside style element  
 By default styles not include  
 
 Availiable operations:  
