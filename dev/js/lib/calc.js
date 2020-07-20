@@ -1,7 +1,14 @@
 import { Exp } from "./exp"
+import { cssText } from '../styles/calc'
 
 export class Calc {
-  constructor(root) {
+  constructor(root, style) {
+    if (style) {
+      let styleTag = document.createElement('style')
+      styleTag.innerHTML = cssText
+      document.querySelector('head').appendChild(styleTag)
+    }
+    
     this.template = require('../templates/calc-template').calc
     this.exp = new Exp()
     this.root = root

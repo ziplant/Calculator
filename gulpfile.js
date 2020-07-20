@@ -9,9 +9,9 @@ const rename = require('gulp-rename');
 const sync = require('browser-sync').create();
 const clean = require('gulp-clean');
 const babel = require('gulp-babel');
+const css2js = require('gulp-css2js')
 //const sourcemaps = require('gulp-sourcemaps');
 const webpack = require('webpack-stream');
-
 
 function cleanDist() {
 	return src('dist/**/*', {read: false})
@@ -32,8 +32,17 @@ function toCSS() {
 				.pipe(dest('dist/'));
 }
 
+function cssJS() {
+	return src('dist/*.css')
+	.pipe(css2js({
+        prefix: "export let cssText = \"",
+        suffix: "\";\n"
+    }))
+	.pipe(dest('dev/js/styles/'))
+}
+
 function babelJS() {
-	return src('dev/js/**/*.js')
+	return src(['dev/js/**/*.js', '!dev/js/styles'])
 				//.pipe(sourcemaps.init())
 				.pipe(debug({title: 'js:'}))
 				.pipe(babel({
@@ -53,6 +62,7 @@ function babelJS() {
 function watchFiles() {
 	watch('dev/sass/**/*.sass', toCSS);
 	watch('dev/js/**/*.js', babelJS);
+	watch('dist/*.css', cssJS);
 }
 
 function browserSync() {
@@ -64,5 +74,5 @@ function browserSync() {
 	sync.watch('dist/**/*.*').on('change', sync.reload);
 }
 
-exports.build = series(cleanDist, toCSS, babelJS );
-exports.start = series(cleanDist, toCSS, babelJS, parallel(watchFiles, browserSync));
+exports.build = series(cleanDist, toCSS, babelJS, cssJS);
+exports.start = series(cleanDist, toCSS, babelJS, cssJS, parallel(watchFiles, browserSync));
