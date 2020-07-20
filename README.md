@@ -11,6 +11,15 @@ Example:
 ```js
 document.querySelector('#calc').calc() 
 ```
+or use as npm module  
+Example:
+```js
+import { Calc } from 'strcalc'
+new Calc(document.querySelector('#calc'), true)
+```
+If flag true, styles will add as text inside <style> element  
+By default styles not include  
+
 Availiable operations:  
 ```js
 ^ / * + - %
