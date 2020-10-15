@@ -4,6 +4,9 @@
 Enter an expression of any complexity into field and get result instantly.  
 Use own variables. In addition, may contain expression too.  
 
+### Demo
+https://ziplant.github.io/strcalc/
+
 ### Usage
 - Include calc.css and calc.js files from dist directory into you page.  
 - Call the node element calc() method to render calculator inside  
